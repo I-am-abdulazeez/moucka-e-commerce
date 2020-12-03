@@ -70,9 +70,6 @@ const OrderForm = () => {
           setSubmitting(true);
           const newOrder = data;
           addOrder(newOrder)
-            .then((res) => {
-              res.json();
-            })
             .then(() => {
               toast({
                 title: "Order Added successfully.",
