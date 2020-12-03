@@ -1,4 +1,4 @@
-export default (state, action) => {
+export default function (state, action) {
   switch (action.type) {
     case "GET_ORDERS":
       return {
@@ -24,4 +24,4 @@ export default (state, action) => {
     default:
       return state;
   }
-};
+}
