@@ -206,7 +206,7 @@ const OrderForm = () => {
                         <Box>
                           <FormControl
                             isInvalid={
-                              errors.customerName && errors.customerName
+                              errors.customerName && touched.customerName
                             }
                           >
                             <FormLabel>Customer Name: </FormLabel>
