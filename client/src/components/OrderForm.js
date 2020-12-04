@@ -81,7 +81,7 @@ const OrderForm = () => {
               setSubmitting(false);
               setTimeout(() => {
                 onClose();
-              }, 3000);
+              }, 1500);
             })
             .catch((err) => {
               setSubmitting(true);
