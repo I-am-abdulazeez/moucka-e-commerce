@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
     const connect = await mongoose.connect(
-      process.env.MONGO_URI || "mongodb://localhost/mouka-orders",
+      process.env.MONGO_URI || "mongodb://localhost:27017/mouka-orders",
       {
         useNewUrlParser: true,
         useCreateIndex: true,
@@ -11,7 +11,8 @@ const connectDB = async () => {
       }
     );
     console.log(
-      `MongoDB Connected: ${connect.connection.host}`.cyan.underline.bold
+      `MongoDB Connected: ${connect.connection.host}`.cyan.underline.bold,
+      connect
     );
   } catch (error) {
     console.log(`Error: ${error.message}`.red);
